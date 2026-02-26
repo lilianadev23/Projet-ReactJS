@@ -5,7 +5,10 @@ function TodoForm({ addTask }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (task.trim() === "") return;
+    if (task.trim() === ""){
+      alert("Veuillez Remplir le champ tache");
+      return;
+    } 
 
     addTask(task);
     setTask("");

@@ -11,10 +11,21 @@ const Todo = () => {
       id: Date.now(),
       text,
       completed: false
-    };
+    };   
 
     setTasks([...tasks, newTask]);
+   
   };
+  const toggleTask=(id)=>{
+    setTasks(
+      tasks.map(
+        task => task.id===id ? {...task,completed:!task.completed} : task
+      )
+    )
+  }
+  const deleteTask=(id)=>{
+    setTasks(tasks.filter(task => task.id!==id))
+  }
 
   
   return (
@@ -27,15 +38,17 @@ const Todo = () => {
 
         <div className="mt-3">
           <span className="badge bg-primary me-2">
-            Total: 
+            Total: {tasks.length}
           </span>
           <span className="badge bg-success">
-            Terminées: 
+            Terminées: {tasks.filter(t => t.completed).length}
           </span>
         </div>
         <h2 className='text-primary mt-5'>Liste des Taches :</h2>
         <TodoList
           tasks={tasks}
+          toggleTask={toggleTask}
+          deleteTask={deleteTask}
           
         />
       </div>
