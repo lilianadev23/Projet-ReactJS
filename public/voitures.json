@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "marque": "Toyota",
+      "modele": "Yaris",
+      "prixJour": 350,
+      "image": "yaris.png",
+      "disponible": true
+    },
+    {
+      "id": 2,
+      "marque": "Dacia",
+      "modele": "Logan",
+      "prixJour": 300,
+      "image": "logan.png",
+      "disponible": true
+    },
+    {
+      "id": 3,
+      "marque": "Renault",
+      "modele": "Clio 5",
+      "prixJour": 420,
+      "image": "clio5.png",
+      "disponible": false
+    },
+    {
+      "id": 4,
+      "marque": "Hyundai",
+      "modele": "i10",
+      "prixJour": 320,
+      "image": "i10.png",
+      "disponible": true
+    },
+    {
+      "id": 5,
+      "marque": "Kia",
+      "modele": "Picanto",
+      "prixJour": 330,
+      "image": "picanto.png",
+      "disponible": true
+    },
+    {
+      "id": 6,
+      "marque": "Peugeot",
+      "modele": "208",
+      "prixJour": 400,
+      "image": "208.png",
+      "disponible": true
+    },
+    {
+      "id": 7,
+      "marque": "Volkswagen",
+      "modele": "Polo",
+      "prixJour": 450,
+      "image": "polo.png",
+      "disponible": false
+    },
+    {
+      "id": 8,
+      "marque": "Seat",
+      "modele": "Ibiza",
+      "prixJour": 410,
+      "image": "ibiza.png",
+      "disponible": true
+    },
+    {
+      "id": 9,
+      "marque": "Ford",
+      "modele": "Fiesta",
+      "prixJour": 390,
+      "image": "fiesta.png",
+      "disponible": true
+    }
+  ]

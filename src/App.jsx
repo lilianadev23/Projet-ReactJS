@@ -5,6 +5,8 @@ import { useState } from "react";
 import Background from './composantes/Background/Background'
 import Navbar from './composantes/Navabar/Navbar'
 import Content from './composantes/Content/Content'
+import CatalogueVoitures from "./composantes/Catalogue/CatalogueVoitures";
+import { useEffect } from "react";
 
 function App() {
     let contentdata=[
@@ -14,11 +16,17 @@ function App() {
     ];
     const [contentCount,setContentCount]=useState(0);
     const [videoStatus,setVideoStatuts]=useState(false);
+    useEffect(()=>{
+      setInterval(()=>{
+        setContentCount((count)=>{return count===2 ? 0 : count+1});        
+      },3000);
+    },[])
   
   return (
     
     <div>
-      <Background contentCount={contentCount} videoStatus={videoStatus}  />
+      {/*   
+       <Background contentCount={contentCount} videoStatus={videoStatus}  />
       <Navbar />
       <Content 
       contentCount={contentCount}
@@ -29,7 +37,9 @@ function App() {
 
        
        />
-    </div>
+       */}
+       <CatalogueVoitures />  
+        </div>
   );
 }
 

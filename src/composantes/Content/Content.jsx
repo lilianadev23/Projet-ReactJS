@@ -18,13 +18,13 @@ const Content = ({contentCount,setContentCount,videoStatus,setVideoStatuts,conte
           </div>
           <div className='content-explore'>
               <ul className='btn-actions'>
-                <li className='btn-action'></li>
-                <li className='btn-action'></li>
-                <li className='btn-action'></li>
+                <li onClick={()=>setContentCount(0)} className={contentCount===0  ? 'btn-action btn-orange' : 'btn-action' }></li>
+                <li onClick={()=>setContentCount(1)} className={contentCount===1  ? 'btn-action btn-orange' : 'btn-action' }></li>
+                <li onClick={()=>setContentCount(2)} className={contentCount===2  ? 'btn-action btn-orange' : 'btn-action' }></li>
               </ul>           
           
                 <div className='content-play'>
-                    <img src={videoStatus ? pause : play} alt="" /> 
+                    <img onClick={()=>setVideoStatuts(!videoStatus)} src={videoStatus ? pause : play} alt="" /> 
                     <p>Voir Video</p>          
                 </div>
           </div>
